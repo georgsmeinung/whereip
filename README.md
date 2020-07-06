@@ -1,6 +1,6 @@
 ## whereip
 # Welcome to Where IP!
-REST service to collect geographical data for a given IP. This an app that gets the Country for a given IP and related information. It supports both IPv4 and IPv6
+whereip is a REST service to collect geographical data for a given IP. This service gets the Country for a given IP and related information. It supports both IPv4 and IPv6
 
 You can use it as a REST service in a line like:
 
