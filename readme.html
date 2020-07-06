@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">		
+        <title>Where IP</title>
+    </head>
+    <body>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">Welcome to Where IP!</h1>
+                <p class="lead">This an app that gets the Country for a given IP and related information. It supports both IPv4 and IPv6</p>
+                <p>You can use it as a REST service in a line like:</p>
+                <div class="alert alert-light" role="alert">
+                    <samp>
+                        AU <span class="badge badge-success">GET</span> <a href="/whereip/1.1.1.1">localhost:3000/whereip/1.1.1.1</a><br/>
+                        US <span class="badge badge-success">GET</span> <a href="/whereip/2606:4700:4700::1111">localhost:3000/whereip/2606:4700:4700::1111</a><br/>
+                        BR <span class="badge badge-success">GET</span> <a href="/whereip/200.223.129.162">localhost:3000/whereip/200.223.129.162</a><br/>
+                        ES <span class="badge badge-success">GET</span> <a href="/whereip/195.53.69.132">localhost:3000/whereip/195.53.69.132</a><br/>
+                        IN <span class="badge badge-success">GET</span> <a href="/whereip/203.115.71.66">localhost:3000/whereip/203.115.71.66</a>
+                    </samp>
+                </div>
+                <p>And you will get and answer like this:</p>
+                <div class="alert alert-light" role="alert">
+                    <samp>
+                        {
+                            "From": "1.1.1.1",
+                            "When": "2020-03-26T11:30:56-0300",
+                            "CountryCode": "AU",
+                            "CountryName": "Australia",
+                            "Languages": [
+                                "English"
+                            ],
+                            "Timezones": [
+                                "2020-03-26T14:30:56+0000",
+                                "2020-03-26T14:33:56+0003",
+                                "2020-03-26T14:30:56+0000",
+                                "2020-03-26T14:30:56+0000",
+                                "2020-03-26T14:33:56+0003",
+                                "2020-03-26T15:30:56+0100",
+                                "2020-03-26T15:33:56+0103",
+                                "2020-03-26T15:33:56+0103"
+                            ],
+                            "Distante": 13076,
+                            "Currency": "AUD",
+                            "ExRate": 0.83484
+                        }
+                    </samp>
+                </div>
+                <p>You can get view and clear stats from here:</p>
+                <div class="alert alert-light" role="alert">
+                    <samp>
+                        <span class="badge badge-success">GET</span> <a href="/stats/">localhost:3000/stats/</a><br/>
+                        <span class="badge badge-success">GET</span> <a href="/fullstats/">localhost:3000/fullstats/</a><br/>
+                        <span class="badge badge-success">GET</span> <a href="/clearstats/">localhost:3000/clearstats/</a>
+                    </samp>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
